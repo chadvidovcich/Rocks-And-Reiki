@@ -5,21 +5,8 @@
     "titleBar.activeBackground": "#FFC600",
     "titleBar.inactiveBackground": "#FFC600CC"
   },
-  "emmet.includeLanguages": { 
-    "javascript": "javascriptreact", 
-    "vue-html": "html", 
-  }, 
-  "emmet.triggerExpansionOnTab": true,
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.alwaysShowStatus": true,
+  // "emmet.triggerExpansionOnTab": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  },
-  "prettier.disableLanguages": ["javascript", "javascriptreact"]
+  }
 }

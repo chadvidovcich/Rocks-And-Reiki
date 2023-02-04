@@ -5,16 +5,14 @@
     "titleBar.activeBackground": "#FF2C70",
     "titleBar.inactiveBackground": "#FF2C70CC"
   },
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.alwaysShowStatus": true,
+  "emmet.triggerExpansionOnTab": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "prettier.disableLanguages": ["javascript", "javascriptreact"]
+
+  "compilerOptions": {
+    "module": "ES6",
+    "jsx": "preserve",
+    "checkJs": true
+  }
 }

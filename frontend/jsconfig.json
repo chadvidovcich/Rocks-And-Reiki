@@ -1,8 +1,10 @@
+// jsconfig.json at project root
+
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "ES6",
     "jsx": "preserve",
-    "moduleResolution": "node"
+    "checkJs": true
   },
   "exclude": ["node_modules", "**/node_modules/*"]
 }

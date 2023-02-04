@@ -1,1 +1,8 @@
-{}
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

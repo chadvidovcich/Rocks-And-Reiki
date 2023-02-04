@@ -1,3 +1,6 @@
+# Keystone JS builds
+.keystone/
+
 # Logs
 logs
 *.log

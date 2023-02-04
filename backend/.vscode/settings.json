@@ -8,11 +8,5 @@
   "emmet.triggerExpansionOnTab": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  },
-
-  "compilerOptions": {
-    "module": "ES6",
-    "jsx": "preserve",
-    "checkJs": true
   }
 }

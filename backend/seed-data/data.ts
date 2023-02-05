@@ -12,7 +12,7 @@ export const products = [
     name: 'Yeti Hondo',
     description: 'soo nice',
     status: 'AVAILABLE',
-    price: 3423,
+    price: 3400,
     photo: {
       id: '5dfbed262849d7961377c2c0',
       filename: 'hondo.jpg',

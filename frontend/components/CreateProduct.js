@@ -53,7 +53,6 @@ export default function CreateProduct() {
         const res = await createProduct();
         clearForm();
         // go to that product's page
-        console.log(res.data);
         Router.push({
           pathname: `/product/${res.data.createProduct.id}`,
         });

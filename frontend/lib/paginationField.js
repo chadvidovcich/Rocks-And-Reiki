@@ -18,7 +18,7 @@ export default function paginationField() {
       if (items.length && items.length !== first && page === pages) {
         return items;
       }
-      // we dont have any items. Need to fetch from network
+      // we don't have any items. Need to fetch from network
       if (items.length !== first) {
         return false;
       }

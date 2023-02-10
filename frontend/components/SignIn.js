@@ -1,6 +1,6 @@
 import { useMutation } from '@apollo/client';
+import gql from 'graphql-tag';
 import useForm from '../lib/useForm';
-import gql from '../node_modules/graphql-tag/lib/index';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
 import { CURRENT_USER_QUERY } from './User';
@@ -42,11 +42,13 @@ export default function SignIn() {
     resetForm();
     // send data to the GQL api
   }
+
   const error =
     data?.authenticateUserWithPassword.__typename ===
     'UserAuthenticationWithPasswordFailure'
       ? data?.authenticateUserWithPassword
       : undefined;
+
   return (
     <Form method="POST" onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>

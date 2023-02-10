@@ -5,15 +5,16 @@ import Nav from './Nav';
 
 const Logo = styled.h1`
   font-size: 4rem;
-  width: 50vw;
+  width: auto;
   margin-left: 2rem;
+  padding: 0 2rem;
   position: relative;
   z-index: 2;
-  /* background: var(--purple, rebeccapurple); */
-  transform: skew(-12deg);
+  transform: skew(-20deg);
+  background: var(--purple);
   a {
-    color: var(--purple);
-    text-decoration: underline;
+    color: white;
+    /* text-decoration: underline; */
     text-transform: uppercase;
     padding: 0.5rem 1 rem;
   }
@@ -24,8 +25,9 @@ const HeaderStyles = styled.header`
     border-bottom: 10px solid var(--black, black);
     display: grid;
     grid-template-columns: auto 1fr;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: stretch;
+    /* border: 10px solid green; */
   }
 
   .sub-bar {

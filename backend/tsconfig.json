@@ -1,8 +1,17 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
+    "strict": true,
     "module": "ESNext",
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "moduleResolution": "node"
   },
-  "exclude": ["node_modules", "**/node_modules/*"]
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "ignorePatterns": [".eslintrc.json"]
 }

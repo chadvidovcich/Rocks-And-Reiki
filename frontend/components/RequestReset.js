@@ -40,7 +40,6 @@ export default function RequestReset() {
         {data?.sendUserPasswordResetLink === null && (
           <p>Success! Check your email for a link.</p>
         )}
-        {console.log(data?.sendUserPasswordResetLink)}
         <label htmlFor="email">
           Email
           <input

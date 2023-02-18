@@ -25,6 +25,12 @@ const { withAuth } = createAuth({
     fields: ['name', 'email', 'password'],
     // TODO add initial roles here
   },
+  passwordResetLink: {
+    async sendToken(args) {
+      console.log(args);
+    },
+    tokensValidForMins: 60,
+  },
 });
 
 if (process.env.FRONTEND_URL === undefined) {

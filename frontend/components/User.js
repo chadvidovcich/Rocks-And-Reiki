@@ -1,3 +1,4 @@
+// @ts-ignore
 import { gql, useQuery } from '@apollo/client';
 
 export const CURRENT_USER_QUERY = gql`
@@ -7,7 +8,21 @@ export const CURRENT_USER_QUERY = gql`
         id
         email
         name
-        # TODO query the cart once we have it
+        cart {
+          id
+          quantity
+          product {
+            id
+            price
+            name
+            description
+            photo {
+              image {
+                publicUrlTransformed
+              }
+            }
+          }
+        }
       }
     }
   }

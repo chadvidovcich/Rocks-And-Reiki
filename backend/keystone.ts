@@ -9,7 +9,9 @@ import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
 import { insertSeedData } from './seed-data';
+import { sendPasswordResetEmail } from './lib/mail';
 
+// eslint-disable-next-line operator-linebreak
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-rocks-reiki';
 const sessionConfig = {
@@ -27,7 +29,8 @@ const { withAuth } = createAuth({
   },
   passwordResetLink: {
     async sendToken(args) {
-      console.log(args);
+      // send the email
+      await sendPasswordResetEmail(args.token, args.identity);
     },
     tokensValidForMins: 60,
   },
@@ -62,6 +65,7 @@ export default withAuth(
     }),
     ui: {
       // Show the UI only if pass this test.
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       isAccessAllowed: ({ session }) => !!session?.data,
     },
     session: withItemData(statelessSessions(sessionConfig), {

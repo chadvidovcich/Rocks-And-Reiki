@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:prettier/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }]
+  },
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": ["node_modules/*", "dist/*", "coverage/*"],
+
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // TypeScript
+
+      "extends": [
+        "airbnb-typescript",
+        "prettier/@typescript-eslint",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { cloudinaryImage } from '@keystone-next/cloudinary';
 import { relationship, text } from '@keystone-next/fields';
-import { list, config } from '@keystone-next/keystone/schema';
+import { list } from '@keystone-next/keystone/schema';
 import 'dotenv/config';
 
 export const cloudinary = {

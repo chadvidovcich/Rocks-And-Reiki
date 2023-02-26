@@ -11,6 +11,7 @@ import { ProductImage } from './schemas/ProductImage';
 import { CartItem } from './schemas/CartItem';
 import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
+import { extendGraphqlSchema } from './mutations';
 
 // eslint-disable-next-line operator-linebreak
 const databaseURL =
@@ -65,6 +66,7 @@ export default withAuth(
       ProductImage,
       CartItem,
     }),
+    extendGraphqlSchema,
     ui: {
       // Show the UI only if pass this test.
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access

@@ -1,6 +1,7 @@
 // @ts-ignore
 import Link from 'next/link';
 import { useCart } from '../lib/cartState';
+import CartCount from './CartCount';
 import SignOut from './SignOut';
 import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
@@ -18,7 +19,12 @@ export default function Nav() {
           <Link href="/account">Account</Link>
           <SignOut />
           <button type="button" onClick={openCart}>
-            Cart
+            My Cart
+            <CartCount
+              count={user.cart.reduce((tally, cartItem) => {
+                return tally + cartItem.quantity;
+              }, 0)}
+            />
           </button>
         </>
       )}

@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+// @ts-ignore
 import { useMutation } from '@apollo/client';
 
 const DELETE_PRODUCT_MUTATION = gql`

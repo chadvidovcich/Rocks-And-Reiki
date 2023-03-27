@@ -1,5 +1,7 @@
+// @ts-ignore
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+// @ts-ignore
 import Router from 'next/router';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';

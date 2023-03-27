@@ -1,3 +1,4 @@
+
 # Logs
 logs
 *.log
@@ -86,6 +87,9 @@ web_modules/
 # Next.js build output
 .next
 out
+
+# Keystone JS builds
+.keystone/
 
 # Nuxt.js build / generate output
 .nuxt

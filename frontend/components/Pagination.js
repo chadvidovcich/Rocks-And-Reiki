@@ -1,5 +1,8 @@
+// @ts-ignore
 import { useQuery } from '@apollo/client';
+// @ts-ignore
 import Head from 'next/head';
+// @ts-ignore
 import Link from 'next/link';
 import gql from 'graphql-tag';
 import PaginationStyles from './styles/PaginationStyles';

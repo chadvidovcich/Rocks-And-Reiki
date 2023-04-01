@@ -43,7 +43,7 @@ export default function SingleProduct({ id }) {
   if (error) return <ErrorMessage error={error} />;
   const { Product } = data;
   return (
-    <ProductStyles>
+    <ProductStyles data-testid="singleProduct">
       <Head>
         <title>Rocks and Reiki | {Product.name}</title>
       </Head>
@@ -55,3 +55,5 @@ export default function SingleProduct({ id }) {
     </ProductStyles>
   );
 }
+
+export { SINGLE_ITEM_QUERY };

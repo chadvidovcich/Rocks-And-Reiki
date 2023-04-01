@@ -21,7 +21,7 @@ describe('<Product/>', () => {
     expect(link).toHaveTextContent(product.name);
   });
 
-  it('Renders and matches the snapshot', () => {
+  it('renders and matches the snapshot', () => {
     const { container, debug } = render(
       <MockedProvider>
         <Product product={product} />
@@ -30,7 +30,7 @@ describe('<Product/>', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Renders the image properly', () => {
+  it('renders the image properly', () => {
     const { container, debug } = render(
       <MockedProvider>
         <Product product={product} />

@@ -8,5 +8,6 @@
   "emmet.triggerExpansionOnTab": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
-  }
+  },
+  "cSpell.words": ["Combobox"]
 }

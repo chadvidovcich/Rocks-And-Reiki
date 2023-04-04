@@ -1,6 +1,4 @@
-// @ts-ignore
-import { render, screen } from '@testing-library/react';
-// @ts-ignore
+import { render } from '@testing-library/react';
 import wait from 'waait';
 import CartCount from '../components/CartCount';
 

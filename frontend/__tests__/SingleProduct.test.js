@@ -1,7 +1,6 @@
 import SingleProduct, { SINGLE_ITEM_QUERY } from '../components/SingleProduct';
 import { fakeItem } from '../lib/testUtils';
 import { MockedProvider } from '@apollo/react-testing';
-// @ts-ignore
 import { render, screen } from '@testing-library/react';
 
 // create Mocks and fake data
@@ -28,7 +27,7 @@ describe('<Single Product/>', () => {
   it('renders with proper data', async () => {
     const { container, debug } = render(
       <MockedProvider mocks={mocks}>
-        <SingleProduct id="123" />
+        <SingleProduct id='123' />
       </MockedProvider>
     );
     // wait for test id to show up
@@ -54,7 +53,7 @@ describe('<Single Product/>', () => {
     ];
     const { container, debug } = render(
       <MockedProvider mocks={errorMock}>
-        <SingleProduct id="123" />
+        <SingleProduct id='123' />
       </MockedProvider>
     );
     await screen.findByTestId('graphql-error');

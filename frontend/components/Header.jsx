@@ -1,4 +1,3 @@
-// @ts-ignore
 import Link from 'next/link';
 import styled from 'styled-components';
 import Cart from './Cart';
@@ -58,13 +57,13 @@ const HeaderStyles = styled.header`
 function Header() {
   return (
     <HeaderStyles>
-      <div className="bar">
+      <div className='bar'>
         <Logo>
-          <Link href="/">Rocks and Reiki</Link>
+          <Link href='/'>Rocks and Reiki</Link>
         </Logo>
         <Nav />
       </div>
-      <div className="sub-bar">
+      <div className='sub-bar'>
         <Search />
       </div>
       <Cart></Cart>

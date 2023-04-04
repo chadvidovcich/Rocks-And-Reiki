@@ -1,4 +1,3 @@
-// @ts-ignore
 import { render, screen } from '@testing-library/react';
 import { MockedProvider } from '../node_modules/@apollo/react-testing/index';
 import Nav from '../components/Nav';

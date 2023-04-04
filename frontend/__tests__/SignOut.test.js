@@ -1,6 +1,4 @@
-// @ts-ignore
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { MockedProvider } from '../node_modules/@apollo/react-testing/index';
 import SignOut, { SIGNOUT_MUTATION } from '../components/SignOut';
 import wait from 'waait';
@@ -13,7 +11,9 @@ const mocks = [
       variables: {},
     },
     result: {
-      success: [{ message: 'Success Log Out' }],
+      data: {
+        success: { success: true },
+      },
     },
   },
 ];

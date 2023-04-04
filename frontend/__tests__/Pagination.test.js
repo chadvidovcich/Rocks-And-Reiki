@@ -1,7 +1,6 @@
 import { MockedProvider } from '@apollo/react-testing';
 import Pagination from '../components/Pagination';
 import { makePaginationMocksFor } from '../lib/testUtils';
-// @ts-ignore
 import { render, screen } from '@testing-library/react';
 import { perPage } from '../config';
 

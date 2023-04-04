@@ -1,6 +1,4 @@
-// @ts-ignore
 import { useLazyQuery } from '@apollo/client';
-// @ts-ignore
 import { useCombobox, resetIdCounter } from 'downshift';
 import gql from 'graphql-tag';
 import debounce from 'lodash.debounce';
@@ -90,12 +88,11 @@ function Search() {
             <DropDownItem
               key={item.id}
               {...getItemProps({ item })}
-              highlighted={index === highlightedIndex}
-            >
+              highlighted={index === highlightedIndex}>
               <img
                 src={item.photo.image.publicUrlTransformed}
                 alt={item.name}
-                width="50px"
+                width='50px'
               />
               {item.name}
             </DropDownItem>

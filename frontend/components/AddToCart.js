@@ -1,5 +1,4 @@
 import gql from 'graphql-tag';
-// @ts-ignore
 import { useMutation } from '@apollo/client';
 import { CURRENT_USER_QUERY } from './User';
 
@@ -17,7 +16,7 @@ function AddToCart({ id }) {
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
   return (
-    <button disabled={loading} type="button" onClick={addToCart}>
+    <button disabled={loading} type='button' onClick={() => addToCart()}>
       Add{loading && 'ing'} To Cart🛒
     </button>
   );

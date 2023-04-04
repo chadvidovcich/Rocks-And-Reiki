@@ -51,6 +51,7 @@ describe('<SignUp/>', () => {
     await userEvent.type(screen.getByPlaceholderText(/password/i), password);
     // Click the submit
     await userEvent.click(screen.getByText('Sign Up!'));
+    // Look for text or fail test
     await screen.findByText(`Signed up with ${me.email}. Please Sign In!`);
   });
 });

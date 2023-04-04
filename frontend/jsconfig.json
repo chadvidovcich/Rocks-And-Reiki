@@ -1,5 +1,3 @@
-// jsconfig.json at project root
-
 {
   "compilerOptions": {
     "jsx": "preserve",

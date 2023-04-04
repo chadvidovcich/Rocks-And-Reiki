@@ -1,68 +1,56 @@
-// @ts-ignore
 import { render, screen } from '@testing-library/react';
-import { MockedProvider } from '../node_modules/@apollo/react-testing/index';
-// import userEvent from '@testing-library/user-event';
-import SignUp, { SIGNUP_MUTATION } from '../components/SignUp';
-import { CURRENT_USER_QUERY } from '../components/User';
-import { fakeUser } from '../lib/testUtils';
-import wait from 'waait';
+import { MockedProvider } from '@apollo/react-testing';
 import userEvent from '@testing-library/user-event';
+import Signup, { SIGNUP_MUTATION } from '../components/SignUp';
+import { fakeUser } from '../lib/testUtils';
 
-const mockUser = fakeUser();
-const mocksPassword = 'password123';
-
+const me = fakeUser();
+const password = 'password';
 const mocks = [
-  // mutation mock
+  // Mutation Mock
   {
     request: {
       query: SIGNUP_MUTATION,
       variables: {
-        name: mockUser.name,
-        email: mockUser.email,
-        password: mocksPassword,
+        name: me.name,
+        email: me.email,
+        password,
       },
     },
     result: {
       data: {
-        __typename: 'User',
-        id: 'abc23',
-        email: mockUser.email,
-        name: mockUser.name,
+        createUser: {
+          __typename: 'User',
+          id: 'abc123',
+          email: me.email,
+          name: me.name,
+        },
       },
     },
   },
 ];
 
 describe('<SignUp/>', () => {
-  it('should render and match snapshot', () => {
-    const { container, debug } = render(
+  it('render and matches snapshot', () => {
+    const { container } = render(
       <MockedProvider>
-        <SignUp />
+        <Signup />
       </MockedProvider>
     );
     expect(container).toMatchSnapshot();
   });
-  it('should call the mutation properly', async () => {
+  it('calls the mutation properly', async () => {
     const { container, debug } = render(
       <MockedProvider mocks={mocks}>
-        <SignUp />
+        <Signup />
       </MockedProvider>
     );
-    await wait(400);
-    // type into the boxes
-    await userEvent.type(
-      screen.getByPlaceholderText('Your Name'),
-      mockUser.name
-    );
-    await userEvent.type(
-      screen.getByPlaceholderText('Your Email Address'),
-      mockUser.email
-    );
-    await userEvent.type(
-      screen.getByPlaceholderText('Password'),
-      mocksPassword
-    );
-    //  click the submit button
-    await userEvent.click(screen.getByTestId('signUpButton'));
+    // Type into the boxes
+    await userEvent.type(screen.getByPlaceholderText(/name/i), me.name);
+    await userEvent.type(screen.getByPlaceholderText(/email/i), me.email);
+    await userEvent.type(screen.getByPlaceholderText(/password/i), password);
+    // Click the submit
+    await userEvent.click(screen.getByText('Sign Up!'));
+    await screen.findByText(`Signed up with ${me.email}. Please Sign In!`);
   });
 });

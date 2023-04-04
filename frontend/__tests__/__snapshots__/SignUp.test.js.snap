@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignUp/> should render and match snapshot 1`] = `
+exports[`<SignUp/> render and matches snapshot 1`] = `
 <div>
   <form
     class="Form-sc-munsfu-0 fVFZwe"
@@ -47,7 +47,6 @@ exports[`<SignUp/> should render and match snapshot 1`] = `
         />
       </label>
       <button
-        data-testid="signUpButton"
         type="submit"
       >
         Sign Up!

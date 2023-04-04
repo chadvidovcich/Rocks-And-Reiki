@@ -6,5 +6,6 @@
     "jsx": "preserve",
     "checkJs": true
   },
+  "moduleResolution": "node",
   "exclude": ["node_modules", "**/node_modules/*"]
 }

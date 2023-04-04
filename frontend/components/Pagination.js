@@ -24,7 +24,7 @@ export default function Pagination({ page }) {
   const { count } = data._allProductsMeta;
   const pageCount = Math.ceil(count / perPage);
   return (
-    <PaginationStyles>
+    <PaginationStyles data-testid="pagination">
       <Head>
         <title>
           Rocks and Reiki - Page {page} of {pageCount}

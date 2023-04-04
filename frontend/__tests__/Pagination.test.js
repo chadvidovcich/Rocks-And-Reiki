@@ -1,4 +1,4 @@
-import { MockedProvider } from '../node_modules/@apollo/react-testing/index';
+import { MockedProvider } from '@apollo/react-testing';
 import Pagination from '../components/Pagination';
 import { makePaginationMocksFor } from '../lib/testUtils';
 // @ts-ignore

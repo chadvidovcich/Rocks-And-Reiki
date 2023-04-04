@@ -1,6 +1,6 @@
 import SingleProduct, { SINGLE_ITEM_QUERY } from '../components/SingleProduct';
 import { fakeItem } from '../lib/testUtils';
-import { MockedProvider } from '../node_modules/@apollo/react-testing/index';
+import { MockedProvider } from '@apollo/react-testing';
 // @ts-ignore
 import { render, screen } from '@testing-library/react';
 

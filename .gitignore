@@ -123,9 +123,6 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# Jest snapshots
-__snapshots__
-
 # yarn v2
 .yarn/cache
 .yarn/unplugged

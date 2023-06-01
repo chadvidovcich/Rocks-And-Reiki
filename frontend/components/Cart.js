@@ -2,6 +2,7 @@ import calcTotalPrice from '../lib/calcTotalPrice';
 import { useCart } from '../lib/cartState';
 import formatMoney from '../lib/formatMoney';
 import CartItem from './CartItem';
+import Checkout from './Checkout';
 import CartStyles from './styles/CartStyles';
 import CloseButton from './styles/CloseButton';
 import Supreme from './styles/Supreme';
@@ -30,6 +31,7 @@ export default function Cart() {
       </ul>
       <footer>
         <p>{formatMoney(calcTotalPrice(cartUser.cart))}</p>
+        <Checkout />
       </footer>
     </CartStyles>
   );

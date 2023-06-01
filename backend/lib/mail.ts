@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { createTransport, getTestMessageUrl } from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
@@ -27,8 +26,7 @@ function makeEmail(text: string): string {
   `;
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export async function sendPasswordResetEmail(
+export default async function sendPasswordResetEmail(
   resetToken: string,
   to: string
 ): Promise<void> {

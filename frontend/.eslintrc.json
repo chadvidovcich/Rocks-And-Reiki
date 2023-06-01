@@ -1,20 +1,22 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:prettier/recommended", "airbnb"],
+  "extends": ["plugin:prettier/recommended", "airbnb", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }]
-  },
+  "rules": {},
   "env": {
+    "es6": true,
     "node": true
   },
   "ignorePatterns": ["node_modules/*", "dist/*", "coverage/*"],
 
   "overrides": [
     {
+      "parser": "@typescript-eslint/parser",
       "files": ["*.ts", "*.tsx"], // TypeScript
 
       "extends": [

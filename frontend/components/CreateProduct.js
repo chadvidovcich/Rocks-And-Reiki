@@ -6,7 +6,7 @@ import ErrorMessage from './ErrorMessage';
 import { ALL_PRODUCTS_QUERY } from './Products';
 import Form from './styles/Form';
 
-const CREATE_PRODUCT_MUTATION = gql`
+export const CREATE_PRODUCT_MUTATION = gql`
   mutation CREATE_PRODUCT_MUTATION(
     # Variables passed in with types
     $name: String!
@@ -33,10 +33,10 @@ const CREATE_PRODUCT_MUTATION = gql`
 
 export default function CreateProduct() {
   const { inputs, handleChange, clearForm, resetForm } = useForm({
-    name: 'Nice Chair',
+    name: '',
     image: '',
-    price: 99664,
-    description: "it's a great chair",
+    price: 0,
+    description: '',
   });
   const [createProduct, { loading, error, data }] = useMutation(
     CREATE_PRODUCT_MUTATION,
@@ -56,61 +56,60 @@ export default function CreateProduct() {
         Router.push({
           pathname: `/product/${res.data.createProduct.id}`,
         });
-      }}
-    >
+      }}>
       <ErrorMessage error={error} />
       <fieldset disabled={loading} aria-busy={loading}>
-        <label htmlFor="image">
+        <label htmlFor='image'>
           Image
           <input
             required
-            type="file"
-            name="image"
-            id="image"
+            type='file'
+            name='image'
+            id='image'
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="name">
+        <label htmlFor='name'>
           Name
           <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
+            type='text'
+            name='name'
+            id='name'
+            placeholder='Name'
             value={inputs.name}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="price">
+        <label htmlFor='price'>
           Price
           <input
-            type="number"
-            name="price"
-            id="price"
-            placeholder="Price"
+            type='number'
+            name='price'
+            id='price'
+            placeholder='Price'
             value={inputs.price}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="description">
+        <label htmlFor='description'>
           Description
           <textarea
-            name="description"
-            id="description"
-            placeholder="Description"
+            name='description'
+            id='description'
+            placeholder='Description'
             value={inputs.description}
             onChange={handleChange}
           />
         </label>
 
-        <button type="button" onClick={clearForm}>
+        <button type='button' onClick={clearForm}>
           Clear Form
         </button>
-        <button type="button" onClick={resetForm}>
+        <button type='button' onClick={resetForm}>
           Reset Form
         </button>
 
-        <button type="submit">+ Add Product</button>
+        <button type='submit'>+ Add Product</button>
       </fieldset>
     </Form>
   );

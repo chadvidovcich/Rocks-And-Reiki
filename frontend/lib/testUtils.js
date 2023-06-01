@@ -1,3 +1,4 @@
+// @ts-ignore
 import casual from 'casual';
 import { PAGINATION_QUERY } from '../components/Pagination';
 

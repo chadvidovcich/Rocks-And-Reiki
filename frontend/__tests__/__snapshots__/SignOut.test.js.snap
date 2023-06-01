@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignOut/> should render and match snapshot 1`] = `
+<div>
+  <button
+    data-testid="logOutButton"
+    type="button"
+  >
+    Sign Out
+  </button>
+</div>
+`;

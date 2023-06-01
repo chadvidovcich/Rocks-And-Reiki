@@ -26,7 +26,7 @@ const SEARCH_PRODUCTS_QUERY = gql`
   }
 `;
 
-export default function Search() {
+function Search() {
   const router = useRouter();
 
   const [findItems, { loading, data, error }] = useLazyQuery(
@@ -36,6 +36,7 @@ export default function Search() {
     }
   );
 
+  console.log(data);
   const items = data?.searchTerms || [];
 
   const findItemsButChill = debounce(findItems, 350);
@@ -102,3 +103,4 @@ export default function Search() {
     </SearchStyles>
   );
 }
+export default Search;

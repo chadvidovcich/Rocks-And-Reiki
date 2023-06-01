@@ -1,11 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
-// @ts-ignore
+
 import Router from 'next/router';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
-// @ts-ignore
+
 import { ApolloProvider } from '@apollo/client';
 import withData from '../lib/withData';
 import { CartStateProvider } from '../lib/cartState';
@@ -40,4 +39,5 @@ MyApp.propTypes = {
   pageProps: PropTypes.any,
 };
 
+// @ts-ignore
 export default withData(MyApp);

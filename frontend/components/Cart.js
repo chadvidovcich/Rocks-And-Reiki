@@ -16,11 +16,10 @@ export default function Cart() {
   return (
     <CartStyles
       // @ts-ignore
-      open={cartOpen}
-    >
+      open={cartOpen}>
       <header>
         <Supreme>{cartUser.name}'s Cart</Supreme>
-        <CloseButton type="button" onClick={closeCart}>
+        <CloseButton type='button' onClick={closeCart}>
           &times;
         </CloseButton>
       </header>

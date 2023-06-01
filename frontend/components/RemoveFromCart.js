@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import gql from 'graphql-tag';
-// @ts-ignore
+
 import { useMutation } from '@apollo/client';
 
 const BigButton = styled.button`
@@ -30,13 +30,13 @@ function RemoveFromCart({ id }) {
     variables: { id: id },
     update,
   });
+
   return (
     <BigButton
-      title="Remove this Item from Cart"
-      type="button"
-      onClick={removeFromCart}
-      disabled={loading}
-    >
+      title='Remove this Item from Cart'
+      type='button'
+      onClick={() => removeFromCart()}
+      disabled={loading}>
       &times;
     </BigButton>
   );

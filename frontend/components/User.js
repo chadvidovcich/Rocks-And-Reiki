@@ -1,4 +1,3 @@
-// @ts-ignore
 import { gql, useQuery } from '@apollo/client';
 
 export const CURRENT_USER_QUERY = gql`

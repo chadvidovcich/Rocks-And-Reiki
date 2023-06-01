@@ -9,7 +9,12 @@ import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
 import { insertSeedData } from './seed-data';
+<<<<<<< Updated upstream
 import { sendPasswordResetEmail } from './lib/mail';
+=======
+import sendPasswordResetEmail from './lib/mail';
+import { extendGraphqlSchema } from './mutations';
+>>>>>>> Stashed changes
 
 // eslint-disable-next-line operator-linebreak
 const databaseURL =

@@ -1,6 +1,8 @@
+// eslint-disable-next-line object-curly-newline
 import { integer, select, text, relationship } from '@keystone-next/fields';
 import { list } from '@keystone-next/keystone/schema';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Product = list({
   // TODO
   // access:

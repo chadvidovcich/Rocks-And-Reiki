@@ -28,7 +28,7 @@ export default function DeleteProduct({ id, children }) {
   );
   return (
     <button
-      type="button"
+      type='button'
       disabled={loading}
       onClick={() => {
         // eslint-disable-next-line no-restricted-globals
@@ -36,8 +36,7 @@ export default function DeleteProduct({ id, children }) {
           // ok to delete
           deleteProduct().catch((err) => alert(err.message));
         }
-      }}
-    >
+      }}>
       {children}
     </button>
   );

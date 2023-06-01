@@ -3,7 +3,6 @@ import gql from 'graphql-tag';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
-import { CURRENT_USER_QUERY } from './User';
 
 const RESET_MUTATION = gql`
   mutation RESET_MUTATION(
@@ -44,36 +43,36 @@ export default function Reset({ token }) {
     : undefined;
 
   return (
-    <Form method="POST" onSubmit={handleSubmit}>
+    <Form method='POST' onSubmit={handleSubmit}>
       <h2>Reset Your Password</h2>
       <ErrorMessage error={error || successfulError} />
       <fieldset>
         {data?.redeemUserPasswordResetToken === null && (
           <p>Success! You can now sign in.</p>
         )}
-        <label htmlFor="email">
+        <label htmlFor='email'>
           Email
           <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            autoComplete="email"
+            type='email'
+            name='email'
+            placeholder='Your Email Address'
+            autoComplete='email'
             value={inputs.email}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor='password'>
           Password
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            autoComplete="password"
+            type='password'
+            name='password'
+            placeholder='Password'
+            autoComplete='password'
             value={inputs.password}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Reset</button>
+        <button type='submit'>Reset</button>
       </fieldset>
     </Form>
   );

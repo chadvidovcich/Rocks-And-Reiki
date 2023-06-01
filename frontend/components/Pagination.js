@@ -16,12 +16,12 @@ export const PAGINATION_QUERY = gql`
 
 export default function Pagination({ page }) {
   const { error, loading, data } = useQuery(PAGINATION_QUERY);
-  if (loading) return 'Loading...';
+  if (loading) return <p>Loading...</p>;
   if (error) return <ErrorMessage error={error} />;
   const { count } = data._allProductsMeta;
   const pageCount = Math.ceil(count / perPage);
   return (
-    <PaginationStyles>
+    <PaginationStyles data-testid='pagination'>
       <Head>
         <title>
           Rocks and Reiki - Page {page} of {pageCount}

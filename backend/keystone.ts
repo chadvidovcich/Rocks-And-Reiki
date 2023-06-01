@@ -8,8 +8,11 @@ import {
 import { User } from './schemas/User';
 import { Product } from './schemas/Product';
 import { ProductImage } from './schemas/ProductImage';
+import { CartItem } from './schemas/CartItem';
 import { insertSeedData } from './seed-data';
 import { sendPasswordResetEmail } from './lib/mail';
+import { extendGraphqlSchema } from './mutations';
+
 
 // eslint-disable-next-line operator-linebreak
 const databaseURL =
@@ -58,11 +61,13 @@ export default withAuth(
       },
     },
     lists: createSchema({
-      // TODO: schema items go in here
+      // Schema items go in here
       User,
       Product,
       ProductImage,
+      CartItem,
     }),
+    extendGraphqlSchema,
     ui: {
       // Show the UI only if pass this test.
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access

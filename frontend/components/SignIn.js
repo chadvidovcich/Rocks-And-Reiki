@@ -50,33 +50,33 @@ export default function SignIn() {
       : undefined;
 
   return (
-    <Form method="POST" onSubmit={handleSubmit}>
+    <Form method='POST' onSubmit={handleSubmit}>
       <h2>Sign Into Your Account</h2>
       <ErrorMessage error={error || successfulError} />
       <fieldset>
-        <label htmlFor="email">
+        <label htmlFor='email'>
           Email
           <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            autoComplete="email"
+            type='email'
+            name='email'
+            placeholder='Your Email Address'
+            autoComplete='email'
             value={inputs.email}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor='password'>
           Password
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            autoComplete="password"
+            type='password'
+            name='password'
+            placeholder='Password'
+            autoComplete='password'
             value={inputs.password}
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Sign In!</button>
+        <button type='submit'>Sign In!</button>
       </fieldset>
     </Form>
   );

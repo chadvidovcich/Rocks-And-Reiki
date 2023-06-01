@@ -24,9 +24,9 @@ export default function paginationField() {
       }
       // we have items. return them from cache
       if (items.length) {
-        console.log(
-          `There are ${items.length} items in cache. Sending them to Apollo`
-        );
+        // console.log(
+        //   `There are ${items.length} items in cache. Sending them to Apollo`
+        // );
         return items;
       }
 
@@ -34,7 +34,7 @@ export default function paginationField() {
     },
     merge(existing = [], incoming, { args }) {
       const { skip } = args;
-      console.log(`Merging ${incoming.length} items from the network`);
+      // console.log(`Merging ${incoming.length} items from the network`);
       const merged = existing ? existing.slice(0) : [];
       for (let i = skip; i < skip + incoming.length; ++i) {
         merged[i] = incoming[i - skip];

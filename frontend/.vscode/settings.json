@@ -5,8 +5,5 @@
     "titleBar.activeBackground": "#FFC600",
     "titleBar.inactiveBackground": "#FFC600CC"
   },
-  "emmet.triggerExpansionOnTab": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  }
+  "cSpell.words": ["Combobox", "SIGNIN", "SIGNOUT"]
 }
